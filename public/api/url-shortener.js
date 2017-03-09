@@ -9,7 +9,9 @@ module.exports = function(app, db) {
   function handleGet(req, res) {
     var appURL = process.env.APP_URL || req.protocol + '://' + req.get('host').slice(0,-3) + '/';
     var url = appURL + req.params.url;
-    findURL(url, db, res);
+    if (url != appURL + 'favicon.ico') {
+      findURL(url, db, res);
+    }
   }
 
   function handlePost(req, res) {
