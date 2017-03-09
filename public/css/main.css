@@ -1,3 +1,14 @@
-
+body {
+  background: white; }
+  body .container {
+    background: white;
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.35);
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.35);
+    padding: 3%;
+    position: relative;
+    top: 3vh; }
+    body .container .right {
+      border-left: solid 2px whitesmoke; }
 
 /*# sourceMappingURL=main.css.map */

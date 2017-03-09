@@ -1,0 +1,11 @@
+@mixin cardStyle() {
+    background: white;
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.35);
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.35);
+    //text-align: center;
+}
+@mixin transition($time){
+    transition: all ease-in-out;
+    transition-duration: $time + s;
+}
