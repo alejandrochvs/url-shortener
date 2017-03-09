@@ -7,9 +7,9 @@ module.exports = function(app, db) {
   app.get('/new/:url*', handlePost);
 
   function handleGet(req, res) {
-    var appURL = process.env.APP_URL || req.protocol + '://' + req.get('host').slice(0,-3) + '/';
-    var url = appURL + req.params.url;
-    if (url != appURL + 'favicon.ico') {
+    var appURL = req.protocol + '://' + req.get('host').slice(0,-3) + '/';
+    var url = process.env.APP_URL + req.params.url;
+    if (url != process.env.APP_URL + 'favicon.ico') {
       findURL(url, db, res);
     }
   }
@@ -17,12 +17,12 @@ module.exports = function(app, db) {
   function handlePost(req, res) {
     // Create short url, store and display the info.
     var url = req.url.slice(5);
-    var appURL = process.env.APP_URL || req.protocol + '://' + req.get('host');
+    var appURL = req.protocol + '://' + req.get('host');
     var urlObj = {};
     if (validateURL(url)) {
       urlObj = {
         "original_url": url,
-        "short_url": appURL + "/" + linkGen(),
+        "short_url": process.env.APP_URL + linkGen(),
       };
       res.send(urlObj);
       save(urlObj, db);
