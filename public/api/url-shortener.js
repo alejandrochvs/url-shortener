@@ -7,7 +7,7 @@ module.exports = function(app, db) {
   app.get('/new/:url*', handlePost);
 
   function handleGet(req, res) {
-    var appURL = req.protocol + '://' + req.get('host').slice(0,-3) + '/';
+    var appURL = process.env.APP_URL || req.protocol + '://' + req.get('host').slice(0,-3) + '/';
     var url = appURL + req.params.url;
     findURL(url, db, res);
   }
@@ -15,7 +15,7 @@ module.exports = function(app, db) {
   function handlePost(req, res) {
     // Create short url, store and display the info.
     var url = req.url.slice(5);
-    var appURL = req.protocol + '://' + req.get('host');
+    var appURL = process.env.APP_URL || req.protocol + '://' + req.get('host');
     var urlObj = {};
     if (validateURL(url)) {
       urlObj = {
