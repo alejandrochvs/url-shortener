@@ -7,7 +7,7 @@ const shortUrl = require('./models/shortUrl');
 
 app.use(bodyParser.json());
 app.use(cors());
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:shortUrl")
+mongoose.connect(process.env.MONGOLAB_URI || "mongodb://localhost:shortUrl")
 app.use(express.static(__dirname + "/public"))
 var port = process.env.PORT || 8080;
 
