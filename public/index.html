@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="shortUrlApp">
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+    <meta charset="UTF-8">
+    <title>URL Shortener</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+  </head>
+  <body>
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1 container">
+      <div class="col-xs-12 col-sm-6 left">
+        <h1 class="header col-xs-12">API Projects: URL shortener</h1>
+        <p>By Alejandro Chaves | <a href="https://github.com/alejandrochvs/timestamp">Project GitHub</a></p>
+        <section>
+          <h2>Instructions</h2>
+          <ol>
+            <li>I can pass a URL as a parameter and I will receive a shortened URL in the JSON responsee.</li>
+            <li>If I pass an invalid URL that doesn&apos;t follow the valid http://www.example.com format, the JSON response will contain an error instead.</li>
+            <li>When I visit that shortened URL, it will redirect me to my original link.</li>
+          </ol>
+        </section>
+        </div>
+      <div class="col-xs-12 col-sm-6 right">
+        <h2>Test your output:</h2>
+        <h3 ng-controller="shortAppController">
+            {{urlToShorten}}
+            <input type="text" name="url" placeholder="https://www.google.com/" class="input" ng-model="urlToShorten">
+            <a ng-href="/new/{{urlToShorten}}"><button id="Go" class="btn btn-success">Go</button></a>
+        </h3>
+        <h4><b>Examples</b></h4> - https://github.com/<br> - https://www.freecodecamp.com/<br> - https://www.heroku.com/5<br> - http://alejandrochvs.com/
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
+    <script src="script/app.js"></script>
+  </body>
+</html>
