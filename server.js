@@ -31,16 +31,18 @@ app.get('/new/:urlToShorten*',(req,res,next)=>{
       }
     });
     return res.json(data);
-  }
-  var data = new shortUrl({
+  }else{
+    var data = new shortUrl({
     originalUrl : "Url does not match standard format",
     shortenUrl : "InvalidUrl"
   });
   return res.json(data);
+  }
 });
 app.get('/:urlToForward',(req,res,next)=>{
   var shorterUrl = req.params.urlToForward;
-  shortUrl.findOne({'shortenUrl' : shorterUrl},(err,data)=>{
+  if (shorterUrl != (null || "favicon.ico")){
+    shortUrl.findOne({'shortenUrl' : shorterUrl},(err,data)=>{
     if (err) return res.send('Error reading database');
     var re = RegExp("^(http|https)://","i");
     var strToCheck = data.originalUrl;
@@ -50,4 +52,5 @@ app.get('/:urlToForward',(req,res,next)=>{
       res.redirect(301,"http://" + data.originalUrl);
     }
   });
+  }
 });
