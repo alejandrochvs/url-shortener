@@ -1,0 +1,24 @@
+{
+  "name": "url-shortener",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://alejandrochvs:Sanrafael1@github.com/alejandrochvs/url-shortener.git"
+  },
+  "author": "alejandrochvs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alejandrochvs/url-shortener/issues"
+  },
+  "homepage": "https://github.com/alejandrochvs/url-shortener#readme",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "mongodb": "^2.2.28"
+  }
+}
