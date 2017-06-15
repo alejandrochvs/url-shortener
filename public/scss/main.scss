@@ -1,14 +1,11 @@
-@import "import/variables";
-@import "import/mixins";
 body{
-    background: white;
-    .container{
-        @include cardStyle();
-        padding: 3%;
-        position: relative;
-        top: 3vh;
-        .right{
-            border-left: solid 2px whitesmoke;
+    .jumbotron{
+        padding-bottom: 0;
+    }
+    footer{
+        color: #33b74c;
+        a{
+            color: #33b74c;
         }
     }
 }

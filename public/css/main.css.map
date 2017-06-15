@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "AAEA,IAAI;EACA,UAAU,EAAE,KAAK;EACjB,eAAU;ICHV,UAAU,EAAE,KAAK;IACjB,kBAAkB,EAAE,oCAAoC;IACxD,eAAe,EAAE,oCAAoC;IACrD,UAAU,EAAE,oCAAoC;IDE5C,OAAO,EAAE,EAAE;IACX,QAAQ,EAAE,QAAQ;IAClB,GAAG,EAAE,GAAG;IACR,sBAAM;MACF,WAAW,EAAE,oBAAoB",
-"sources": ["../scss/main.scss","../scss/import/_mixins.scss"],
+"mappings": "AACI,eAAU;EACN,cAAc,EAAE,CAAC;AAErB,WAAM;EACF,KAAK,EAAE,OAAO;EACd,aAAC;IACG,KAAK,EAAE,OAAO",
+"sources": ["../scss/main.scss"],
 "names": [],
 "file": "main.css"
 }
