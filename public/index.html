@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>URL Shortener</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css"> </head>
+
+<body>
+    <div class="col-xs-12 jumbotron">
+        <div class="container">
+            <div class="col-xs-12 title">
+                <h1>URL Shortener</h1> </div>
+            <div class="col-xs-12 sub">
+                <h4 class="col-xs-12">Part of the <a href="http://www.freecodecamp.com/">FreeCodeCamp</a> | <a href="http://www.freecodecamp.com/">API projects.</a></h4>
+                <h5 class="col-xs-12">By <a href="http://github.com/alejandrochvs">Alejandro Chaves.</a></h5> </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="col-xs-12 explanations">
+            <div class="col-xs-12 explanation">
+                <div class="title">
+                    <h2>How to add new URL.</h2></div>
+                <p>Go to /new/[Insert your URL here], it has to be well formatted with [http://], it has to be a valid url like <a href="/new/https://www.google.com/">https://www.google.com/</a>, this will return something like this: <code>{"original_url":"https://www.google.com/","short_url":"http://localhost:3000/9977"}</code></p>
+            </div>
+            <div class="col-xs-12 explanation">
+                <div class="title">
+                    <h2>How to go to existent URL.</h2></div>
+                <p>Go to /[Insert short URL here], this will redirect you to the URL assigned to the short URL, for example: <a href="/9977">http://localhost:3000/9977.</a> </p>
+            </div>
+        </div>
+        <footer>
+            <div class="container wow">
+                <div class="row col-lg-12 text-center">
+                    <h4><strong>Alejandro Chaves</strong></h4>
+                    <ul class="list-unstyled text-primary">
+                        <li><i class="fa fa-whatsapp fa-2x"></i> +57 (300) 489-8565</li>
+                        <li> <i class="fa fa-envelope-o fa-2x"></i> <a href="mailto:name@example.com">alejandrochvs@hotmail.com</a> </li>
+                    </ul>
+                    <br>
+                    <ul class="list-inline text-primary">
+                        <li> <a href="https://www.facebook.com/alejandrochvs" target="_blank"><i class="fa fa-facebook fa-fw fa-3x"></i></a> </li>
+                        <li> <a href="https://www.twitter.com/alejandrochvs" target="_blank"><i class="fa fa-twitter fa-fw fa-3x"></i></a> </li>
+                        <li> <a href="https://co.linkedin.com/in/alejandrochvs" target="_blank"><i class="fa fa-linkedin fa-fw fa-3x"></i></a> </li>
+                        <li> <a href="https://github.com/alejandrochvs" target="_blank"><i class="fa fa-github fa-fw fa-3x"></i></a> </li>
+                        <li> <a href="https://codepen.io/alejandrochvs" target="_blank"><i class="fa fa-codepen fa-fw fa-3x"></i></a> </li>
+                    </ul>
+                    <hr class="small">
+                    <p class="text-muted">Copyright © Alejandro Chaves 2016</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/main.js"></script>
+
+</html>
