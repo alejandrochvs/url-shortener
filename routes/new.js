@@ -18,7 +18,7 @@ router.use('/*', function (req, res) {
             var json = {
                 original_url: url,
                 short_url: host + '/' + random,
-                short_url_id : random
+                short_url_id: random
             }
             mongoose.Promise = global.Promise;
             mongoose.connect(mongoURL);
@@ -32,11 +32,24 @@ router.use('/*', function (req, res) {
                         return res.send(err);
                     }
                     if (err && err.code === 11000) {
+                        urls.findOne({
+                            original_url: json.original_url
+                        }, function (err, docs) {
+                            if (err) {
+                                return res.send(err);
+                            }
+                            var responseDoc = {
+                                original_url : docs.original_url,
+                                short_url : docs.short_url
+                            }
+                            res.send(responseDoc);
+                            mongoose.connection.close();
+                        });
+                    } else {
+                        json.short_url_id = undefined;
+                        res.json(json);
                         mongoose.connection.close();
-                        return res.send('Url already exists.');
                     }
-                    res.json(json);
-                    mongoose.connection.close();
                 });
             });
         } else {
